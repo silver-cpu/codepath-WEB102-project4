@@ -28,10 +28,12 @@ function App() {
   useEffect(() => {fetcher();}, []);
   const addtobanlist = (newat) => {
     setbanlist([...banlist, newat]);
+    console.log(banlist);
   };
   const removefrombanlist = (at) => {
     let updateban = banlist.filter(currentattrebute => currentattrebute !== at);
     setbanlist(updateban);
+    console.log(banlist);
   };
   const catnames = ["Oliver", "Liam", "Sophia", "Emma", "Noah", "Mia", "Ava", "James", "Charlotte", "Benjamin", "Amelia", "Lucas", "Harper", "Ethan", "Ella", "Alexander", "Scarlett", "Mason", "Isabella", "Sebastian"];
   const randname = catnames[Math.floor(Math.random() * catnames.length)];
